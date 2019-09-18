@@ -5,10 +5,10 @@ const Member = (props) => {
     const { name, email, role, about } = props.member;
     return (
        <div className="member">
-            <h2>{name}</h2>
-            <h2>{email}</h2>
-            <h3>{role}</h3>
-            <p>{about}</p>
+            <h2>Name: {name}</h2>
+            <p>Email: {email}</p>
+            <p>Role: {role}</p>
+            <p><em>About Member: {about}</em></p>
         </div>
         
     )
