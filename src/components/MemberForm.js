@@ -2,10 +2,12 @@ import React, { useState } from "react";
 
 const MemberForm = props => {
     console.log(props);
+    //the initial state of Memberform is list. and then we use setList to set the state
     const [list, setList] = useState({name:'', email:'', role:'', about:''});
 
 
     const changeHandler = e => {
+        // looking through list, spreading it, and then looping through and adding -- the e.target.name looks for the thing that has input of name and sets it to the e.target.value you have--key:value pair
         setList({...list, [e.target.name]: e.target.value});
         console.log(e.target.name);
     }
@@ -24,6 +26,7 @@ return (
             
             <label htmlFor='name'>New Member Name: </label>
             <input id='name' type="text" name="name" value={list.name} onChange={changeHandler} />
+            {/* name='name' has to match b/c you're using the attribute and this is how you access it. */}
 
 
 

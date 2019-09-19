@@ -6,6 +6,7 @@ import MemberForm from './components/MemberForm';
 import MemberList from './components/MemberList';
 
 function App() {
+  //setting initial state, created object in form file which contains the data so setting initial state to it...the array in Form.js doesn't have a name, so we're setting the name to members. So in setMember we're getting the data inside the array, named members
   const [members, setMember] = useState(Form);
   const addNewMember = member => {
     setMember([...members, member]);
